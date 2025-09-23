@@ -29,11 +29,20 @@
 /**************************************************************************/
 
 #include "math_funcs.h"
+#include "vector2.h"
 
 #include "core/error/error_macros.h"
 #include "core/math/random_pcg.h"
 
 static RandomPCG default_rand;
+
+float Math::distance(const Vector2 &first_vector, const Vector2 &seccond_vector) const {
+	return Math::sqrt((seccond_vector.x - first_vector.x) * (seccond_vector.x - first_vector.x) + (seccond_vector.y - first_vector.y) * (seccond_vector.y - first_vector.y));
+}
+
+float Math::distance_squared(const Vector2 &first_vector, const Vector2 &seccond_vector) const {
+	return (seccond_vector.x - first_vector.x) * (seccond_vector.x - first_vector.x) + (seccond_vector.y - first_vector.y) * (seccond_vector.y - first_vector.y);
+}
 
 uint32_t Math::rand_from_seed(uint64_t *p_seed) {
 	RandomPCG rng = RandomPCG(*p_seed);

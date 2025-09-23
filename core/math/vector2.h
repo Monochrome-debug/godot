@@ -106,8 +106,6 @@ struct [[nodiscard]] Vector2 {
 		return Vector2(MAX(x, p_scalar), MAX(y, p_scalar));
 	}
 
-	real_t distance_to(const Vector2 &p_vector2) const;
-	real_t distance_squared_to(const Vector2 &p_vector2) const;
 	real_t angle_to(const Vector2 &p_vector2) const;
 	real_t angle_to_point(const Vector2 &p_vector2) const;
 	_FORCE_INLINE_ Vector2 direction_to(const Vector2 &p_to) const;

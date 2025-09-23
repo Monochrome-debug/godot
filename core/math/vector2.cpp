@@ -69,14 +69,6 @@ bool Vector2::is_normalized() const {
 	return Math::is_equal_approx(length_squared(), 1, (real_t)UNIT_EPSILON);
 }
 
-real_t Vector2::distance_to(const Vector2 &p_vector2) const {
-	return Math::sqrt((x - p_vector2.x) * (x - p_vector2.x) + (y - p_vector2.y) * (y - p_vector2.y));
-}
-
-real_t Vector2::distance_squared_to(const Vector2 &p_vector2) const {
-	return (x - p_vector2.x) * (x - p_vector2.x) + (y - p_vector2.y) * (y - p_vector2.y);
-}
-
 real_t Vector2::angle_to(const Vector2 &p_vector2) const {
 	return Math::atan2(cross(p_vector2), dot(p_vector2));
 }
